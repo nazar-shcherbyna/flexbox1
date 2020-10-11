@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 a, button {
@@ -9,31 +10,51 @@ a, button {
 main {
     background-color: #fdde7e;
     font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    width: 100%;
 }
 
 ul li {
     list-style: none;
-    display: inline-flex;
     border: 1px solid #333333;
-    align-content: space-around;
-    justify-content: center;
+    border-radius: 5px;
+    width: 360px;
     background-color: #fff;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.box1 {
-    max-width: 360px;
-}
-
-.box2 {
-    max-width: 360px;
-}
-
-.box3 {
-    max-width: 360px;
 }
 
 h1 {
-    color: #333333  ;
+    color: #333333;
+    font-size: 56px;
+    padding: 10px;
 }
+
+h2 {
+    font-size: 70px;
+    font-weight: 500;
+    color: #02995b;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    text-align: center;
+}
+
+.box:hover,
+.box:focus,
+.box:active {
+    padding: 45px;
+    transition: all 0.3s ease-in;
+    background-color: #c4ffe7;
+}
+/* Добавить контейнерам ширину */
