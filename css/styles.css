@@ -16,7 +16,7 @@ main {
     justify-content: center;
 }
 
-ul {
+ .mybox {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,18 +24,62 @@ ul {
     width: 100%;
 }
 
-ul li {
+.box {
     list-style: none;
-    border: 1px solid #333333;
-    border-radius: 5px;
+    /* border: 1px solid #333333;
+    border-radius: 5px; */
     width: 360px;
     background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.top, 
+.bottom, 
+.right,
+.left {
+    position: absolute;
+    background-color: #bd2b2b;
+    transition: .8s;
+}
+
+.top, 
+.bottom {
+    width: 100%;
+    left: 0;
+    height: 3px;
+    transform: scaleX(0);
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left,
+.right {
+    height: 100%;
+    width: 3px;
+    top: 0;
+    transform: scaleY(0);
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
 }
 
 h1 {
     color: #333333;
     font-size: 56px;
     padding: 10px;
+    margin: 0;
 }
 
 h2 {
@@ -43,17 +87,24 @@ h2 {
     font-weight: 500;
     color: #02995b;
     padding: 20px;
-    margin-top: 20px;
 }
 
-.box {
+p {
     text-align: center;
+    padding: 35px 0 40px;
+
+}
+
+.box:hover .top,
+.box:hover .right,
+.box:hover .bottom,
+.box:hover .left {
+    transform: none;
 }
 
 .box:hover,
 .box:focus,
 .box:active {
-    padding: 45px;
-    transition: all 0.3s ease-in;
-    background-color: #c4ffe7;
+    padding: 40px;
+    transition: 0.8s;
 }
